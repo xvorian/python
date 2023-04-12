@@ -13,3 +13,13 @@ VARIABLE RULES:
   - Must start with a letter or an underscore
   - Can have numbers but can not start with one
 """
+
+x=1 # int
+y=2.5 # float
+name='John Doe' # String
+is_cool=True #boolean
+
+#######
+
+print('Hello World')
+print(type(is_cool)) # check variable type
