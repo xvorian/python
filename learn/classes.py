@@ -22,8 +22,6 @@ class Customer(User):
 
 brad = User('Brad', 34, 'test@test.com','Active')
 
-janet = Customer()
-
 brad.greetings()
 
 
