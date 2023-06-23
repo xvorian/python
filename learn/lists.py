@@ -1,31 +1,36 @@
-# A List is a collection which is ordered and changeable. Allows duplicate members.
-# Create list
-numbers = [1, 2, 65, 3, 5, 67, 4, 3, 5, 6, 4, 2, 4, 5, 87, 3]
-numbers2 = list((43, 67, 67, 4, 3, 2, 56, 67, 87, 56, 3, 23, 45, 67, 89))
+numbers = [1,2,3,4,3,6,7,5,6,7,5,3]
+cities = ["Toronto","Montreal","Quebec","Halifax"]
 
-# empty list
-my_list = []
-
-# list with mixed data types
-mix_list = [1, "Hello", 3.4]
-
-fruits = ["apple", "banana", "cherry", "apple", "cherry"]
-
-
-# print list
+# simple printing
 print(numbers)
-print(numbers2)
+print(cities)
 
-# list functions
-print(fruits[1].capitalize())
-print(fruits)
-print(len(fruits))
+print(cities[3])
 
-# Append to list
-fruits.append('Mangos')
-print(len(fruits))
-print(fruits)
+# interation over the lists
+for city in cities:
+    print(city)
 
-#insert at certain position
-fruits.insert(1,'berries')
-print(fruits)
+#
+#for num in numbers:
+#    print(num)
+
+
+# appending
+dubCities =[]
+for city in cities:
+    dubCities.append(city)
+print(dubCities)
+
+# inserting
+dubCities.insert(0,"Calgary")
+print(dubCities)
+dubCities.insert(0,"Burlington")
+print(dubCities)
+
+# slicing range
+print(dubCities[1:3])
+
+# removing item from list
+dubCities.pop(1)
+print(dubCities)
