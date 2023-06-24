@@ -1,5 +1,5 @@
-from model.store.Item import Item
-from model.store.Phone import Phone
+from model.Item import Item
+from model.Phone import Phone
 
 item = Item("Dell", 1099.99, "Laptop")
 

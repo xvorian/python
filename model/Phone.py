@@ -1,4 +1,4 @@
-from model.store.Item import Item
+from model.Item import Item
 
 class Phone(Item):
     def __init__(self, name: str, price: float, department: str, isBroken: bool):
