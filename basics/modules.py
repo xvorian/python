@@ -1,7 +1,5 @@
 # A module is basically a file containing a set of functions to include in your application. There are core python modules, modules you can install using the pip package manager (including Django) as well as custom modules
 #Core modules
-import datetime
-from datetime import date
 
 from camelcase import CamelCase
 
@@ -15,7 +13,7 @@ from validator import validate_email
 # Using modules
 print(lists.fruits)
 
-print(functions.divide(3,4))
+print(functions.divide(3, 4))
 
 c = CamelCase()
 print(c.hump('all lower case'))
