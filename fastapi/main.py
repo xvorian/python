@@ -1,8 +1,14 @@
-from uuid import UUID, uuid4
+### TO START THE SERVER ###
+# fastapi uvicorn --port 8000 --reload --reload  OR
+# python -m uvicorn main:app --reload OR
+# uvicorn main:app --reload
+# ###########################
+
+from uuid import UUID
 
 from fastapi import FastAPI, HTTPException
-from models import User, Role, Gender
-from typing import Optional, List
+from api.models import User, Role, Gender, Employee
+from typing import List
 
 app = FastAPI()
 db: List[User] = [
@@ -19,15 +25,26 @@ db: List[User] = [
         gender=Gender.MALE,
         roles=Role.ADMIN)]
 
+db_employees = [Employee] =[
+    Employee(
+        id="538b3c05-41b5-4b91-b172-9b1161dfec62",
+        first_name="Jane",
+        last_name="Doe",
+        gender=Gender.FEMALE,
+        roles=Role.STUDENT)
+]
 
 @app.get("/")
 def root():
     return {"Hello": "World"}
 
-
+@app.get("/api/v1/employees")
+def get_employees():
+    return db_employees
 @app.get("/api/v1/users")
 def read_users():
-    return db;
+    return db
+
 
 
 @app.post("/api/v1/users")
